@@ -234,9 +234,21 @@ main {
         align-items: center;
     }
 
-    main {
-        width: 200px;
+    .card {
+        height: 200px;
+        max-width: 150px;
+        margin-top: 6vh;
     }
+
+    .card h4 {
+        font-size: 1.8em;
+    }
+
+    
+    main {
+        width: 380px;
+    }
+    
 
     #hamburger:checked ~ #navul {
         width: 30vw;
