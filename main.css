@@ -25,8 +25,14 @@ heading {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 3vh 0;
+    margin: 20px 0;
+    height: 100px;
 }
+
+heading img {
+    margin: auto 0;
+}
+
 
 #hamburger{
     display: none;
@@ -35,27 +41,19 @@ heading {
 
 form {
     position: absolute;
-    top: 5vh;
+    top: 20px;
     right: 5vw;
 }
 
-nav ul {
-    list-style-type: none;
-    width: 40vw;
-    height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-nav ul li a {
+#navul li a {
     text-decoration: none;
     color: black;
     font-family: myFont;
     font-size: 2em;
 }
 
-nav ul li a:hover {
+#navul li a:hover {
     color: rgb(2, 2, 177);
     font-weight: 700;
 }
@@ -64,31 +62,15 @@ nav ul li a:hover {
    display: none;
 }
 
-#chkpg:checked ~ #pages {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 34vw;
-    height: 91vh;
-    top: 9vh;
-    background-color: #587e4b;
-    border-top: 1px solid black;
-}
-
-#pages a {
-    border-bottom: 1px solid black;
-    padding-left: 1vw;
-}
-
 
 #labelHam {
     display: flex;
     align-items: center;
-    height: 9vh;
+    height: 100px;
 }
 
 #labelHam img {
-    height: 6vh;
+    height: 60px;
 }
 
 #navul {
@@ -104,48 +86,46 @@ nav ul li a:hover {
 
 #hamburger:checked ~ #navul {
     position: absolute;
-    top: 9vh;
+    list-style-type: none;
+    top: 80px;
     right: -5vw;       
-    animation: hamburChecked 0.6s ease-in-out;
+    animation: hamburChecked 0.7s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    width: 95vw;
-    height: 50vh;
+    width: 20vw;
+    height: 100vh;
     background-color: #587e4b;
     border-top: 1px solid black;
  }
 
  @keyframes hamburChecked {
-     0% {right: -100vw;}
+     0% {right: -30vw;}
      100% {right: -5vw;}
  }
  
  #chkpg:checked ~ #pages {
-    
+    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 95vw;
+    width: 20vw;
     left: 0vw;
     background-color: #6d9660;
-    animation: pagesAnime 0.5s ease-in-out;
+    animation: pagesAnime 0.7s ease-in-out;
     top: 69px;;
     bottom: 0px;
 }
 
 @keyframes pagesAnime {
-    0% {left: 100vw}
+    0% {left: 20vw}
     100% {left: 0vw}
 }
 
 #pages a {
     border-bottom: 1px solid black;
+    padding-left: 1vw;
 }
-
-
-
-
 
 main {
     margin: 0 auto;
@@ -232,7 +212,9 @@ main {
 
 @media screen and (max-width: 1200px) {
     heading img {
+        position: absolute;
         width: 450px;
+        left: 5vw;
     }
 
     main {
@@ -241,11 +223,27 @@ main {
 }
 
 @media screen and (max-width: 650px) {
+
     heading img {
-        width: 300px;
+        height: 50px;
+        width: unset;
+    }
+
+    heading {
+        display: flex;
+        align-items: center;
     }
 
     main {
         width: 200px;
     }
+
+    #hamburger:checked ~ #navul {
+        width: 30vw;
+    }
+
+    #chkpg:checked ~ #pages {
+        width: 30vw;
+    }
+
 }
