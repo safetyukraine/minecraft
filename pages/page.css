@@ -70,9 +70,14 @@ nav ul li a {
     font-size: 2em;
 }
 
-nav ul li:hover {
-    transform: scale(1.1);
+/*
+ nav ul li:hover {
+    transform: scale(1.0);
 }
+
+*/
+
+
 nav ul li a:hover {
     color: rgb(2, 2, 177);
     font-weight: 700;
@@ -86,8 +91,16 @@ nav ul li a:hover {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 150px;
-    background-color: rgb(174, 174, 174);
+    width: 34vw;
+    height: 91vh;
+    top: 9vh;
+    background-color: #587e4b;
+    border-top: 1px solid black;
+}
+
+#pages a {
+    border-bottom: 1px solid black;
+    padding-left: 1vw;
 }
 
 main h2 {
@@ -127,6 +140,7 @@ main h2 {
 @media screen and (max-width: 1100px) {
 
     main h2 {
+        padding-top: 90px;
         font-size: 15vw;
     }
 
@@ -172,6 +186,7 @@ main h2 {
         width: 100%;
         border-bottom: 1px solid black;
         text-align: center;
+        height: 35px;
     }
     
   #hamburger:checked ~ #navul {
@@ -195,14 +210,24 @@ main h2 {
      }
      
      #chkpg:checked ~ #pages {
-        position: absolute;
+        
         display: flex;
         flex-direction: column;
-        width: 27vw;
-        background-color: rgb(145, 141, 141);
-        padding-left: 10px;
+        width: 95vw;
+        left: 0vw;
+        background-color: #6d9660;
+        animation: pagesAnime 0.5s ease-in-out;
+        top: 69px;;
+        bottom: 0px;
     }
 
+    @keyframes pagesAnime {
+        0% {left: 100vw}
+        100% {left: 0vw}
+    }
 
+    #pages a {
+        border-bottom: 1px solid black;
+    }
  
 }
