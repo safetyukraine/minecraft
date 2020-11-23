@@ -10,7 +10,9 @@
 }
 
 body {
-    background-color: #7aab69;
+    background-image: url("mineBackgrounds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: scroll;
 }
 
