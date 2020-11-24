@@ -93,7 +93,7 @@ heading img {
     align-items: center;
     justify-content: start;
     width: 20vw;
-    height: 100vh;
+    height: calc(100vh - 90px);
     background-color: #587e4b;
  }
 
@@ -238,13 +238,13 @@ main {
     }
 
     #labelHam {
+        position: fixed;
         top: 0px;
         right: 5vw;
         height: 70px;
     }
 
     #labelHam img {
-        position: fixed;
         right: 5vw;
         height: 40px;
     }
@@ -257,6 +257,7 @@ main {
     }
 
     #hamburger:checked ~ #navul {
+        position: fixed;
         width: 60vw;
         top: 70px;
         border-top: 1px solid black;
