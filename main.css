@@ -292,11 +292,11 @@ main {
     }
 
     #hamburger:checked ~ #navul {
-        width: 40vw;
+        width: 60vw;
     }
 
     #chkpg:checked ~ #pages {
-        width: 40vw;
+        width: 60vw;
     }
 
 }
