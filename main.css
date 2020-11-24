@@ -11,8 +11,13 @@
 
 body {
     background-image: url("mineBackgrounds.jpg");
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#container {
+    
     overflow: scroll;
 }
 
@@ -25,6 +30,7 @@ heading {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
     height: 100px;
 }
@@ -149,7 +155,7 @@ main {
 .card {
     height: 250px;
     max-width: 200px;
-    margin-top: 6vh;
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -208,9 +214,10 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
+    
     heading img {
         position: absolute;
-        width: 450px;
+        width: 300px;
         left: 5vw;
     }
 
@@ -222,11 +229,13 @@ main {
 @media screen and (max-width: 650px) {
 
     heading {
-        display: flex;
-        align-items: center;
-        height: 50px;
-        margin-top: 20px;
+        position: fixed;
+        margin-top: 0px;
+        top: 0px;
+        height: 70px;
         margin-bottom: 0;
+        z-index: 10;
+        background-color: #587e4b;
     }
 
     heading img {
@@ -236,11 +245,14 @@ main {
 
     form {
         top: 0px;
+        z-index: 10;
     }
 
     #labelHam {
-        margin-top: 20px;
-        height: 50px;
+        position: fixed;
+        top: 0px;
+        right: 5vw;
+        height: 70px;
     }
 
     #labelHam img {
@@ -248,18 +260,22 @@ main {
     }
 
     .card {
-        height: 180px;
-        max-width: 130px;
+        height: 50vw;
+        width: 35vw;
         margin-top: 6vh;
     }
 
     .card h4 {
-        font-size: 1.8em;
+        font-size: 6vw;
     }
 
     
     main {
-        width: 300px;
+        position: relative;
+        top: 10vh;
+        width: unset;
+        margin: 0 10vw;
+        
     }
     
 
