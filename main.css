@@ -10,15 +10,17 @@
 }
 
 body {
-    background-image: url("mineBackgrounds.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: scroll;
 }
 
-#container {
-    
-    overflow: scroll;
+#backg {
+    position: fixed;
+    height: 100vh;
+    z-index: -1;
+}
+
+#backg img {
+    object-fit: cover;
 }
 
 ::-webkit-scrollbar {
@@ -214,19 +216,6 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    
-    heading img {
-        position: absolute;
-        width: 300px;
-        left: 5vw;
-    }
-
-    main {
-        width: 550px;
-    }
-}
-
-@media screen and (max-width: 650px) {
 
     heading {
         position: fixed;
@@ -239,8 +228,10 @@ main {
     }
 
     heading img {
+        position: absolute;
         height: 40px;
         width: unset;
+        left: 5vw;
     }
 
     form {
@@ -259,6 +250,37 @@ main {
         height: 40px;
     }
 
+    main {
+        position: relative;
+        top: 10vh;
+        width: 550px;
+        margin-bottom: 20vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    heading img {
+        height: 40px;
+    }
+
+    #labelHam {
+        position: fixed;
+        top: 0px;
+        right: 5vw;
+        height: 70px;
+    }
+
+    #labelHam img {
+        height: 40px;
+    }
+
+    main {
+        width: unset;
+        margin: 0 10vw;
+        margin-bottom: 20vh;
+    }
+
     .card {
         height: 50vw;
         width: 35vw;
@@ -268,16 +290,6 @@ main {
     .card h4 {
         font-size: 6vw;
     }
-
-    
-    main {
-        position: relative;
-        top: 10vh;
-        width: unset;
-        margin: 0 10vw;
-        
-    }
-    
 
     #hamburger:checked ~ #navul {
         width: 40vw;
