@@ -33,18 +33,19 @@ heading img {
     margin: auto 0;
 }
 
+#labelHam {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#labelHam img {
+    height: 60px;
+}
 
 #hamburger{
     display: none;
 }
-
-
-form {
-    position: absolute;
-    top: 20px;
-    right: 5vw;
-}
-
 
 #navul li a {
     text-decoration: none;
@@ -60,17 +61,6 @@ form {
 
 #pages, #chkpg {
    display: none;
-}
-
-
-#labelHam {
-    display: flex;
-    align-items: center;
-    height: 100px;
-}
-
-#labelHam img {
-    height: 60px;
 }
 
 #navul {
@@ -126,6 +116,13 @@ form {
     border-bottom: 1px solid black;
     padding-left: 1vw;
 }
+
+form {
+    position: absolute;
+    top: 20px;
+    right: 5vw;
+}
+
 
 main {
     margin: 0 auto;
@@ -224,19 +221,35 @@ main {
 
 @media screen and (max-width: 650px) {
 
-    heading img {
-        height: 50px;
-        width: unset;
-    }
-
     heading {
         display: flex;
         align-items: center;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    heading img {
+        height: 40px;
+        width: unset;
+    }
+
+    form {
+        top: 0px;
+    }
+
+    #labelHam {
+        margin-top: 20px;
+        height: 50px;
+    }
+
+    #labelHam img {
+        height: 40px;
     }
 
     .card {
-        height: 200px;
-        max-width: 150px;
+        height: 180px;
+        max-width: 130px;
         margin-top: 6vh;
     }
 
@@ -246,16 +259,16 @@ main {
 
     
     main {
-        width: 380px;
+        width: 300px;
     }
     
 
     #hamburger:checked ~ #navul {
-        width: 30vw;
+        width: 40vw;
     }
 
     #chkpg:checked ~ #pages {
-        width: 30vw;
+        width: 40vw;
     }
 
 }
