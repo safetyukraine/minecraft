@@ -256,6 +256,25 @@ main {
         width: 550px;
         margin-bottom: 20vh;
     }
+
+    #hamburger:checked ~ #navul {
+        width: 60vw;
+    }
+
+    #chkpg:checked ~ #pages {
+        width: 60vw;
+    }
+
+    @keyframes hamburChecked {
+        0% {right: -60vw;}
+        100% {right: -5vw;}
+    }
+
+    @keyframes pagesAnime {
+        0% {left: 60vw}
+        100% {left: 0vw}
+    }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -289,24 +308,6 @@ main {
 
     .card h4 {
         font-size: 6vw;
-    }
-
-    #hamburger:checked ~ #navul {
-        width: 60vw;
-    }
-
-    #chkpg:checked ~ #pages {
-        width: 60vw;
-    }
-
-    @keyframes hamburChecked {
-        0% {right: -60vw;}
-        100% {right: -5vw;}
-    }
-
-    @keyframes pagesAnime {
-        0% {left: 60vw}
-        100% {left: 0vw}
     }
 
 }
