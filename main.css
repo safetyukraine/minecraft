@@ -83,9 +83,9 @@ heading img {
 }
 
 #hamburger:checked ~ #navul {
-    position: absolute;
+    position: fixed;
     list-style-type: none;
-    top: 80px;
+    top: 70px;
     right: -5vw;       
     animation: hamburChecked 0.7s ease-in-out;
     display: flex;
@@ -99,7 +99,7 @@ heading img {
  }
 
  @keyframes hamburChecked {
-     0% {right: -30vw;}
+     0% {right: -25vw;}
      100% {right: -5vw;}
  }
  
@@ -130,7 +130,6 @@ form {
     top: 20px;
     right: 5vw;
 }
-
 
 main {
     margin: 0 auto;
@@ -240,13 +239,14 @@ main {
     }
 
     #labelHam {
-        position: fixed;
         top: 0px;
         right: 5vw;
         height: 70px;
     }
 
     #labelHam img {
+        position: fixed;
+        right: 5vw;
         height: 40px;
     }
 
